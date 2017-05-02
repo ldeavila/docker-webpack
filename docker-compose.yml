@@ -1,0 +1,10 @@
+version: '2'
+
+services:
+  webapp-service:
+    build: .
+    command: npm run serve
+    ports:
+      - "7000:7000"
+    volumes:
+      - ./src:/opt/app/src
