@@ -14,6 +14,7 @@
     "css-loader": "^0.28.4",
     "file-loader": "^0.11.2",
     "jest": "^20.0.4",
+    "rimraf": "^2.6.1",
     "style-loader": "^0.18.2",
     "url-loader": "^0.5.9",
     "webpack": "^3.5.4",
@@ -24,8 +25,9 @@
   },
   "scripts": {
     "build": "webpack",
-    "serve": "webpack-dev-server",
+    "clean": "rimraf coverage dist",
     "dev": "concurrently 'webpack-dev-server' 'jest --watch'",
+    "serve": "webpack-dev-server",
     "test:unit": "jest"
   }
 }
