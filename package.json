@@ -8,15 +8,16 @@
     "bootstrap": "^3.3.7"
   },
   "devDependencies": {
-    "babel-jest": "^19.0.0",
+    "babel-jest": "^20.0.3",
     "babel-preset-es2015": "^6.24.1",
-    "css-loader": "^0.28.0",
-    "file-loader": "^0.11.1",
-    "jest": "^19.0.2",
-    "style-loader": "^0.16.1",
-    "url-loader": "^0.5.8",
-    "webpack": "^2.4.1",
-    "webpack-dev-server": "^2.4.5"
+    "concurrently": "^3.5.0",
+    "css-loader": "^0.28.4",
+    "file-loader": "^0.11.2",
+    "jest": "^20.0.4",
+    "style-loader": "^0.18.2",
+    "url-loader": "^0.5.9",
+    "webpack": "^3.5.4",
+    "webpack-dev-server": "^2.7.1"
   },
   "jest": {
     "collectCoverage": true
@@ -24,6 +25,7 @@
   "scripts": {
     "build": "webpack",
     "serve": "webpack-dev-server",
+    "dev": "concurrently 'webpack-dev-server' 'jest --watch'",
     "test:unit": "jest"
   }
 }
